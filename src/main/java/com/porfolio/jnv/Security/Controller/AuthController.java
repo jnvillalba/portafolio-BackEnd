@@ -3,10 +3,10 @@ package com.porfolio.jnv.Security.Controller;
 import com.porfolio.jnv.Security.Dto.JwtDto;
 import com.porfolio.jnv.Security.Dto.LoginUsuario;
 import com.porfolio.jnv.Security.Dto.NuevoUsuario;
-import com.porfolio.jnv.Security.Entity.Rol;
+import com.porfolio.jnv.Security.Entity.Role;
 import com.porfolio.jnv.Security.Entity.Usuario;
-import com.porfolio.jnv.Security.Enums.RolNombre;
-import com.porfolio.jnv.Security.Service.RolService;
+import com.porfolio.jnv.Security.Enums.RoleNombre;
+import com.porfolio.jnv.Security.Service.RoleService;
 import com.porfolio.jnv.Security.Service.UsuarioService;
 import com.porfolio.jnv.Security.jwt.JwtProvider;
 import java.util.HashSet;
@@ -40,7 +40,7 @@ public class AuthController {
     @Autowired
     UsuarioService usuarioService;
     @Autowired
-    RolService rolService;
+    RoleService rolService;
     @Autowired
     JwtProvider jwtprovider;
     
@@ -60,11 +60,11 @@ public class AuthController {
                                         nuevoUsuario.getEmail(),
                                         passwordEnconder.encode(nuevoUsuario.getPassword()));
         
-        Set<Rol> roles = new HashSet<>();
-        roles.add(rolService.getByRolNombre(RolNombre.ROL_USER).get());
+        Set<Role> roles = new HashSet<>();
+        roles.add(rolService.getByRoleNombre(RoleNombre.ROLE_USER).get());
         
         if(nuevoUsuario.getRoles().contains("admin"))
-            roles.add(rolService.getByRolNombre(RolNombre.ROL_ADMIN).get());
+            roles.add(rolService.getByRoleNombre(RoleNombre.ROLE_ADMIN).get());
         usuario.setRoles(roles);
         usuarioService.save(usuario);
         

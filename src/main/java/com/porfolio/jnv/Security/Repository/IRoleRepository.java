@@ -4,14 +4,14 @@
  */
 package com.porfolio.jnv.Security.Repository;
 
-import com.porfolio.jnv.Security.Entity.Rol;
-import com.porfolio.jnv.Security.Enums.RolNombre;
+import com.porfolio.jnv.Security.Entity.Role;
+import com.porfolio.jnv.Security.Enums.RoleNombre;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IRolRepository extends JpaRepository<Rol, Integer>{
-    Optional<Rol> findByRolNombre(RolNombre rolNombre);
+public interface IRoleRepository extends JpaRepository<Role, Integer>{
+    Optional<Role> findByRoleNombre(RoleNombre rolNombre);
     
 }

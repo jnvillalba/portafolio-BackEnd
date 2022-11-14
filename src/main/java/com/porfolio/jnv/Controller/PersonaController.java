@@ -41,14 +41,14 @@ public class PersonaController {
     }
 
     
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/{id}")    
     public String deletePersona(@PathVariable Long id){
         ipersonaservice.deletePersona(id);
         return "Persona borrada correctamente";
     }
     
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/personas/editar/{id}")  
     public Persona editPersona(@PathVariable Long id,
             @RequestParam("nombre") String nuevoNombre,
