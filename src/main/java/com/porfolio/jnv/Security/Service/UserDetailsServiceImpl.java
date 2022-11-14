@@ -1,5 +1,5 @@
-
 package com.porfolio.jnv.Security.Service;
+
 import com.porfolio.jnv.Security.Entity.Usuario;
 import com.porfolio.jnv.Security.Entity.UsuarioPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class UserDetailsImpl implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService{
     @Autowired
     UsuarioService usuarioService;
 
