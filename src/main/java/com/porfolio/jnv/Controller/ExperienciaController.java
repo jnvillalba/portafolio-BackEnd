@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.porfolio.jnv.Security.Controller;
+package com.porfolio.jnv.Controller;
 import com.porfolio.jnv.Dto.dtoExperiencia;
 import com.porfolio.jnv.Entity.Experiencia;
+import com.porfolio.jnv.Security.Controller.Mensaje;
 import com.porfolio.jnv.Service.ExperienciaService;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
