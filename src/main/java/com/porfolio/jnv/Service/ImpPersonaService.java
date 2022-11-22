@@ -1,6 +1,5 @@
 package com.porfolio.jnv.Service;
 
-import com.porfolio.jnv.Entity.Experiencia;
 import com.porfolio.jnv.Entity.Persona;
 import com.porfolio.jnv.Repository.IPersonaRepository;
 import java.util.List;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class ImpPersonaService {
+public class ImpPersonaService{
 
     @Autowired
     IPersonaRepository ipersonarepository;
