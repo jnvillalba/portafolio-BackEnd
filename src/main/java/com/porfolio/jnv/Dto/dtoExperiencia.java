@@ -15,7 +15,6 @@ public class dtoExperiencia {
     @NotBlank
     private String img;
     
-    
     public dtoExperiencia() {
     }
 

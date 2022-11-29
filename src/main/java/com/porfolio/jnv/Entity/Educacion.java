@@ -12,15 +12,22 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String titulo;
+    private String periodo;
+    private String img;
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE, String titulo, String periodo, String img) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.titulo = titulo;
+        this.periodo = periodo;
+        this.img = img;
     }
 
+    
     public int getId() {
         return id;
     }
@@ -44,6 +51,31 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
     
     
 }
