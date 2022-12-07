@@ -87,6 +87,7 @@ public class PersonaController {
         persona.setNombre(dtopersona.getNombre());
         persona.setApellido(dtopersona.getApellido());
         persona.setDescripcion(dtopersona.getDescripcion());
+        persona.setTitulo(dtopersona.getTitulo());
         persona.setImg(dtopersona.getImg());
         persona.setImgBanner(dtopersona.getImgBanner());
         

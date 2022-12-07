@@ -10,6 +10,10 @@ public class dtoPersona {
     private String apellido;
     @NotBlank
     private String descripcion;
+    
+    @NotBlank
+    private String titulo;
+    
     @NotBlank
     private String img;
     
@@ -66,6 +70,16 @@ public class dtoPersona {
     public void setImgBanner(String imgBanner) {
         this.imgBanner = imgBanner;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    
 
     
     

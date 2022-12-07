@@ -26,16 +26,21 @@ public class Persona {
     @NotNull
     private String descripcion;
     
+    @NotNull
+    private String titulo;
+    
     private String img;
     private String imgBanner;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String descripcion, String img, String imgBanner) {
+    public Persona(String nombre, String apellido, String descripcion, String titulo,
+            String img, String imgBanner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
+        this.titulo = titulo;
         this.img = img;
         this.imgBanner = imgBanner;
     }
@@ -87,6 +92,15 @@ public class Persona {
     public void setImgBanner(String imgBanner) {
         this.imgBanner = imgBanner;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
     
     
     
