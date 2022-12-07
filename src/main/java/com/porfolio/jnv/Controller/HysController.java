@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/skill")
 public class HysController {
-    
+
     @Autowired
     HysService shys;
 
@@ -60,7 +60,7 @@ public class HysController {
             return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Hys hYs = new Hys(dtohys.getNombre(), dtohys.getPorcentaje());
+        Hys hYs = new Hys(dtohys.getNombre(), dtohys.getPorcentaje(), dtohys.getImg());
         shys.save(hYs);
 
         return new ResponseEntity(new Mensaje("Skill agregada"), HttpStatus.OK);
@@ -85,10 +85,11 @@ public class HysController {
         Hys hYs = shys.getOne(id).get();
         hYs.setNombre(dtohys.getNombre());
         hYs.setPorcentaje(dtohys.getPorcentaje());
-
+        hYs.setImg(dtohys.getImg());
+        
         shys.save(hYs);
         return new ResponseEntity(new Mensaje("Skill actualizada"), HttpStatus.OK);
 
     }
-    
+
 }
