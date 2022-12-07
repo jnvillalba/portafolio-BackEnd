@@ -88,6 +88,7 @@ public class PersonaController {
         persona.setApellido(dtopersona.getApellido());
         persona.setDescripcion(dtopersona.getDescripcion());
         persona.setImg(dtopersona.getImg());
+        persona.setImgBanner(dtopersona.getImgBanner());
         
         sPersona.save(persona);
         
@@ -96,51 +97,3 @@ public class PersonaController {
     
     
 }
-
-/*
-@Autowired IPersonaService ipersonaservice;
-    
-    @GetMapping("/personas/traer")
-    public List<Persona> getPersona(){
-        return ipersonaservice.getPersona();
-    }
-    
-    @GetMapping("personas/traer/perfil")
-    public Persona findPersona(){
-        return ipersonaservice.findPersona((long)1);
-    }
-    
-    
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/personas/crear")
-    public String createPersona(@RequestBody Persona persona){
-        ipersonaservice.savePersona(persona);
-        return "Persona creada correctamente";
-    }
-
-    
-    @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/personas/borrar/{id}")    
-    public String deletePersona(@PathVariable Long id){
-        ipersonaservice.deletePersona(id);
-        return "Persona borrada correctamente";
-    }
-    
-    @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/personas/editar/{id}")  
-    public Persona editPersona(@PathVariable Long id,
-            @RequestParam("nombre") String nuevoNombre,
-            @RequestParam("apellido") String nuevoApellido,
-            @RequestParam("img") String nuevaImg){
-        
-        Persona persona = ipersonaservice.findPersona(id);
-        
-        persona.setNombre(nuevoNombre);
-        persona.setApellido(nuevoApellido);
-        persona.setImg(nuevaImg);
-        
-        ipersonaservice.savePersona(persona);
-        return persona;
-        
-    }
-    */
