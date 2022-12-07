@@ -15,7 +15,7 @@ public class dtoProyecto {
     @NotBlank
     private String link;
     
-    @NotBlank
+    
     private String img;
 
     public dtoProyecto() {

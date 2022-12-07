@@ -12,7 +12,7 @@ public class dtoEducacion {
     private String titulo;
     @NotBlank
     private String periodo;
-    @NotBlank
+    
     private String img;
 
     public dtoEducacion() {

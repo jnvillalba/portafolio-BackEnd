@@ -12,7 +12,7 @@ public class dtoExperiencia {
     private String puesto;
     @NotBlank
     private String periodo;
-    @NotBlank
+    
     private String img;
     
     public dtoExperiencia() {
