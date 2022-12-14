@@ -14,10 +14,10 @@ public class dtoPersona {
     @NotBlank
     private String titulo;
     
-    @NotBlank
+    
     private String img;
     
-    @NotBlank
+    
     private String imgBanner;
 
     public dtoPersona() {

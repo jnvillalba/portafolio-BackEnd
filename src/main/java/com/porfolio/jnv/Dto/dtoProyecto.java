@@ -12,22 +12,26 @@ public class dtoProyecto {
     @NotBlank
     private String descripcionP;
     
-    @NotBlank
+    
     private String link;
     
+    @NotBlank
+    private String repo;
     
     private String img;
 
     public dtoProyecto() {
     }
-    
-    public dtoProyecto(String nombreP, String fecha, String descripcionP, String link, String img) {
+
+    public dtoProyecto(String nombreP, String fecha, String descripcionP, String link, String repo, String img) {
         this.nombreP = nombreP;
         this.fecha = fecha;
         this.descripcionP = descripcionP;
         this.link = link;
+        this.repo = repo;
         this.img = img;
     }
+    
 
     public String getNombreP() {
         return nombreP;
@@ -67,6 +71,14 @@ public class dtoProyecto {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getRepo() {
+        return repo;
+    }
+
+    public void setRepo(String repo) {
+        this.repo = repo;
     }
     
     

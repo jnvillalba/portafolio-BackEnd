@@ -7,25 +7,29 @@ import javax.persistence.Id;
 
 @Entity
 public class Proyecto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+
     private String nombreP;
     private String fecha;
     private String descripcionP;
     private String link;
+    private String repo;
     private String img;
 
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String fecha, String descripcionP, String link, String img) {
+    public Proyecto(String nombreP, String fecha, String descripcionP, String link, String img,
+             String repo) {
         this.nombreP = nombreP;
         this.fecha = fecha;
         this.descripcionP = descripcionP;
         this.link = link;
         this.img = img;
+        this.repo = repo;
     }
 
     public int getId() {
@@ -75,7 +79,15 @@ public class Proyecto {
     public void setImg(String img) {
         this.img = img;
     }
+
+    public String getRepo() {
+        return repo;
+    }
+
+    public void setRepo(String repo) {
+        this.repo = repo;
+    }
     
     
-    
+
 }

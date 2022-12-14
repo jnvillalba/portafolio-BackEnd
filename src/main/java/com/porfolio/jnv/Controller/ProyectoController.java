@@ -61,7 +61,7 @@ public class ProyectoController {
         
         Proyecto proyecto = new Proyecto(
                 dtoproyecto.getNombreP(), dtoproyecto.getFecha(), dtoproyecto.getDescripcionP(),
-                dtoproyecto.getLink(),dtoproyecto.getImg()
+                dtoproyecto.getLink(),dtoproyecto.getImg(),dtoproyecto.getRepo()
             );
         sproyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto creado"), HttpStatus.OK);
@@ -87,6 +87,7 @@ public class ProyectoController {
         proyecto.setFecha(dtoproyecto.getFecha());
         proyecto.setLink(dtoproyecto.getLink());
         proyecto.setImg(dtoproyecto.getImg());
+        proyecto.setRepo(dtoproyecto.getRepo());
         
         sproyecto.save(proyecto);
         
