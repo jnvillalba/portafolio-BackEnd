@@ -1,4 +1,4 @@
-FROM amazoncorretto:18-alpine-jdk
+FROM amazoncorretto:8-alpine-jdk
 
 MAINTAINER jnvillalba
 
