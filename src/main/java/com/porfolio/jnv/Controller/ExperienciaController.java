@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.porfolio.jnv.Controller;
 import com.porfolio.jnv.Dto.dtoExperiencia;
 import com.porfolio.jnv.Entity.Experiencia;
@@ -24,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/explab")
-@CrossOrigin(origins = "https://backend-jnvillalba.koyeb.app")
+@CrossOrigin(origins = {"https://backend-jnvillalba.koyeb.app","http://localhost:4200"})
 public class ExperienciaController {
     @Autowired
     ExperienciaService sExperiencia;

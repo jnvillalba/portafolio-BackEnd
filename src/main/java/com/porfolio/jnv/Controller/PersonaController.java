@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/personas")
-@CrossOrigin(origins = "https://backend-jnvillalba.koyeb.app")
+@CrossOrigin(origins = {"https://backend-jnvillalba.koyeb.app","http://localhost:4200"})
 public class PersonaController {
      @Autowired
      ImpPersonaService sPersona;
@@ -31,7 +31,7 @@ public class PersonaController {
         return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @CrossOrigin(origins = "https://backend-jnvillalba.koyeb.app")
+    
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id")int id){
         if(!sPersona.existsById(id)){
