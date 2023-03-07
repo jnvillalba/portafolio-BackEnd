@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = {"https://backend-jnvillalba.koyeb.app","http://localhost:4200"})
+@CrossOrigin(origins = "https://backend-jnvillalba.koyeb.app")
 public class AuthController {
     
     @Autowired
@@ -72,6 +72,8 @@ public class AuthController {
         
         
     }
+    
+    @CrossOrigin(origins = "https://backend-jnvillalba.koyeb.app")
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
