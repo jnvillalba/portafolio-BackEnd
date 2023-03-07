@@ -13,7 +13,7 @@ public class JnvApplication {
         SpringApplication.run(JnvApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -24,5 +24,5 @@ public class JnvApplication {
                         .allowedHeaders("*");
             }
         };
-    }
+    }*/
 }
