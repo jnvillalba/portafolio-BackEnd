@@ -15,7 +15,7 @@ public class JnvApplication {
     public static void main(String[] args) {
         SpringApplication.run(JnvApplication.class, args);
     }
-
+/*
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
@@ -31,5 +31,5 @@ public class JnvApplication {
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(urlBasedCorsConfigurationSource);
     }
-
+*/
 }
